@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+
+    <script src="jquery-1.11.js"></script>
+    <script src="ovo_carousel.js"></script>
+
+    <link rel="stylesheet" href="ovo_carousel.css">
+
+    <style>
+        .box{
+            position: relative;
+            height: 300px;
+            border: 1px solid #aaa;
+        }
+        ul li:nth-child(1){
+            background-color:pink;
+        }
+        ul li:nth-child(2){
+            background-color:skyblue;
+        }
+        ul li:nth-child(3){
+            background-color:seagreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+<!--        box为自定义盒子-->
+
+        <ul class="carousel-box">
+<!--            carousel-box 为轮播图盒子-->
+
+            <li class="carousel-item"></li>
+<!--            carousel-item 为轮播图项-->
+
+            <li class="carousel-item"></li>
+            <li class="carousel-item"></li>
+        </ul>
+        <ol class="carousel-sub"></ol>
+<!--            carousel-sub 为轮播下标框-->
+    </div>
+
+    <script>
+        $(".box").ovo_carousel(3000);
+        //3000为毫秒值
+    </script>
+</body>
+</html>
